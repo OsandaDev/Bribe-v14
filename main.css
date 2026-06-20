@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:black;
+    font-family:Arial, sans-serif;
+}
+
+/* Logo Screen */
+
+#logoScreen{
+    position:fixed;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    background:black;
+    animation:logoAnim 4s forwards;
+    z-index:10;
+}
+
+#logoScreen h1{
+    font-size:3rem;
+    font-weight:bold;
+}
+
+#logoScreen p{
+    margin-top:10px;
+    font-size:1rem;
+    opacity:0.8;
+}
+
+@keyframes logoAnim{
+    0%{
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    80%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+/* Splash Screen */
+
+#splashScreen{
+    position:fixed;
+    inset:0;
+    display:none;
+    background:black;
+}
+
+#splashImage{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Loading */
+
+#loadingContainer{
+    position:absolute;
+    left:50%;
+    bottom:8%;
+    transform:translateX(-50%);
+    width:70%;
+}
+
+#loadingText{
+    color:white;
+    text-align:center;
+    margin-bottom:10px;
+    font-size:1rem;
+    animation:smoothBlink 1.5s infinite;
+}
+
+@keyframes smoothBlink{
+    0%{
+        opacity:0.3;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0.3;
+    }
+}
+
+#loadingBarOuter{
+    width:100%;
+    height:14px;
+    border:2px solid white;
+    overflow:hidden;
+}
+
+#loadingBar{
+    width:0%;
+    height:100%;
+    background:white;
+    transition:width 0.15s linear;
+}
