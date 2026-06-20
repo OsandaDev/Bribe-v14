@@ -1,4 +1,4 @@
-const imageUrl = "https://i.ibb.co/sd58ppxM/splash.jpg";
+const imageUrl = "https://i.ibb.co/XfyKRrqF/Picsart-26-06-20-23-27-50-815.jpg";
 
 // Preload image during logo animation
 const preloadImg = new Image();
